@@ -1,0 +1,2 @@
+class CursorPositionOutOfBoundsException < Exception
+end

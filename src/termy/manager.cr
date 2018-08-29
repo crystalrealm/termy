@@ -3,6 +3,8 @@ require "./*"
 module Termy
   class Manager
     setter io
+    @width : Int32
+    @height : Int32
 
     include Termy::Screen
     include Termy::Cursor
@@ -13,6 +15,8 @@ module Termy
       else
         @io = STDIN
       end
+
+      @width, @height = get_terminal_size
     end
 
     def write(sequence)
